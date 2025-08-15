@@ -37,10 +37,8 @@ lib,
           alt-e = "workspace E";
           alt-f = "workspace F";
           alt-g = "workspace G";
-          alt-i = "workspace I";
           alt-m = "workspace M";
           alt-n = "workspace N";
-          alt-o = "workspace O";
           alt-p = "workspace P";
           alt-q = "workspace Q";
           alt-r = "workspace R";
