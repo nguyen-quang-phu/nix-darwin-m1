@@ -135,6 +135,10 @@ lib,
     # `brew install`
     # TODO Feel free to add your favorite apps here.
     brews = [
+      "dopplerhq/cli/doppler"
+      "bottom"
+      "copier"
+      "kanata"
       "cloudflared"
       "ffmpeg"
       "borders"

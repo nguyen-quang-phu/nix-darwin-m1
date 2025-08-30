@@ -9,6 +9,7 @@ lib,
     aerospace = {
       enable = true;
       userSettings = {
+
         start-at-login = true;
         mode.main.binding = {
           alt-h = "focus left";
@@ -88,10 +89,86 @@ lib,
           # cmd-h = []; # Disable "hide application"
           cmd-alt-h = []; # Disable "hide others"
         };
+
+        after-startup-command = [
+          # Launch Kitty and assign to workspace 1
+          "exec-and-forget /etc/profiles/per-user/dev/bin/kitty"
+        ];
+        on-window-detected=[
+          {
+            # check-further-callbacks = false;
+            "if" = {
+              app-id = "net.kovidgoyal.kitty";
+              # app-name-regex-substring = "CoolApp";
+              # during-aerospace-startup = false;
+              # window-title-regex-substring = "Title";
+              # workspace = "cool-workspace";
+            };
+            run = [
+              "move-node-to-workspace 1"
+            ];
+          }
+          {
+            "if" = {
+              app-id = "org.mozilla.firefox";
+            };
+            run = [
+              "move-node-to-workspace 2"
+            ];
+          }
+          {
+            "if" = {
+              app-id = "Mattermost.Desktop";
+            };
+            run = [
+              "move-node-to-workspace 3"
+            ];
+          }
+          # {
+          #   # check-further-callbacks = false;
+          #   "if" = {
+          #     app-id = "com.google.Chrome";
+          #   };
+          #   run = [
+          #     "move-node-to-workspace 2"
+          #   ];
+          # }
+          {
+            "if" = {
+              app-id = "com.spotify.client";
+            };
+            run = [
+              "move-node-to-workspace S"
+            ];
+          }
+          {
+            # check-further-callbacks = false;
+            "if" = {
+              app-id = "app.zen-browser.zen";
+            };
+            run = [
+              "move-node-to-workspace 9"
+            ];
+          }
+          {
+            "if" = {
+              app-id = "com.atlassian.trello";
+            };
+            run = [
+              "move-node-to-workspace T"
+            ];
+          }
+
+          {
+            "if" = {
+              app-id = "com.bitwarden.desktop";
+            };
+            run = [
+              "move-node-to-workspace B"
+            ];
+          }
+        ];
       };
-      userSettings.after-startup-command = [
-        "exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0"
-      ];
     };
     kitty = {
       enable = true;
@@ -121,6 +198,8 @@ lib,
         "cmd+f" = "send_text all \\x1bf";
         "cmd+t" = "send_text all \\x02c";
         "cmd+shift+t" = "send_text all \\x02pw";
+        "cmd+shift+ctrl+alt+a" = "send_text all \\x01";
+        "cmd+shift+ctrl+alt+x" = "send_text all \\x18";
       };
 
       settings = {
@@ -272,12 +351,25 @@ lib,
       enable = true;
       enableZshIntegration = true;
       enableNushellIntegration = true;
+      keymap={
+        manager.prepend_keymap = [
+          {
+            run = ''
+              shell 'just generate-component $PWD'
+            '';
+            on = [ ";" ];
+          }
+        ];
+      };
     };
 
     uv = {
       enable = true;
     };
     bun = {
+      enable = true;
+    };
+    helix = {
       enable = true;
     };
   };
