@@ -3,6 +3,11 @@
 if ps -o args= $PPID | grep -q -- '--amend'; then
   exit 0
 fi
+
+# Skip if commit message already starts with emoji + type (likely an amend)
+if [[ "$COMMIT_MSG" =~ ^(✨|🐛|📝|🎨|♻️|⚡|✅|🔧) ]]; then
+  exit 0
+fi
 # Get current branch name
 BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
 

@@ -4,11 +4,6 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
-    sidem.url = "github:taha-yassine/sidem";
-    yt-x = {
-      url = "github:Benexl/yt-x";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -22,9 +17,7 @@
     nix-darwin,
     nixpkgs,
     home-manager,
-    sidem,
     agenix,
-    yt-x
     }: let
       username = "dev";
       system = "aarch64-darwin"; # aarch64-darwin or x86_64-darwin
@@ -42,8 +35,6 @@
         environment.systemPackages = with pkgs; [
           vim
           vscode
-          sidem.packages."${system}".default
-          yt-x.packages."${system}".default
           agenix.packages.${system}.default
         ];
 

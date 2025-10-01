@@ -83,7 +83,7 @@ lib,
     gitleaks
     killport
     age
-    postgis
+    # postgis
     #rubyPackages.solargraph
     #rubocop
     #git-crypt
@@ -104,7 +104,11 @@ lib,
     # pulsemixer
     ffmpeg
   ];
-  fonts.packages = [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
+  # fonts.packages = [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
+  fonts.packages = with pkgs.nerd-fonts; [
+    jetbrains-mono
+    fira-code
+  ];
   system.primaryUser = "dev";
   # TODO To make this work, homebrew need to be installed manually, see https://brew.sh
   #
@@ -165,6 +169,7 @@ lib,
       "whalebrew"
       "wrk"
       "yt-dlp"
+      "lazygit"
       {
         name = "redis";
         restart_service = true;
@@ -178,7 +183,7 @@ lib,
       # {
       #   name = "mongodb-community@8.0";
       #   restart_service = true;
-      #   link = true;
+      #   link = false;
       #   # conflicts_with = ["mysql"];
       # }
       # {
@@ -199,10 +204,11 @@ lib,
     # `brew install --cask`
     # TODO Feel free to add your favorite apps here.
     casks = [
+      "vlc"
       "espanso"
       "amazon-q"
       "arc"
-      "bitwarden"
+      # "bitwarden"
       "calibre"
       "cloudflare-warp"
       "cursor"
@@ -229,6 +235,7 @@ lib,
       # "Xcode" = 497799835;
       # "DropOver" = 1355679052;
       # "Amphetamine" = 937984704;
+      # "Bitwarden" = 1352778147;
     };
 
     whalebrews = [

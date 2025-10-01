@@ -15,6 +15,7 @@ lib,
       enable = true;
       extraConfig = {
         core = {
+          symlinks = false;
           hooksPath = "${config.home.homeDirectory}/.config/git/hooks"; # 1 second warning to a typo'd command
           whitespace = "fix,-indent-with-non-tab,trailing-space,cr-at-eol";
         }; # Path to your global hooks directory
@@ -78,7 +79,7 @@ lib,
         };
 
         rerere = {
-          enabled = true;
+          enabled = false;
           autoupdate = true;
         };
         diff.mnemonicprefix = true;
@@ -138,6 +139,9 @@ lib,
         "justfile"
         "remote.just"
         "data.ms"
+        ".lazy.lua"
+        ".oxlintrc.json"
+        "declarations.d.ts"
       ];
     };
 
@@ -149,7 +153,7 @@ lib,
       enable = true;
     };
     lazygit = {
-      enable = true;
+      enable = false;
       settings = {
         os = {
           editPreset = "nvim-remote";

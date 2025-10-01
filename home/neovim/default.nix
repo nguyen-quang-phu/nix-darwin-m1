@@ -58,7 +58,7 @@
       lua-language-server
       codeium
       # json
-      nodePackages.vscode-json-languageserver
+      # nodePackages.vscode-json-languageserver
       # yaml
       yaml-language-server
       # latex
@@ -89,7 +89,7 @@
       #docker
       docker-compose-language-service
       docker-ls
-      dockerfile-language-server-nodejs
+      dockerfile-language-server
       hadolint
       #graphql
       # nodePackages.graphql-language-service-cli

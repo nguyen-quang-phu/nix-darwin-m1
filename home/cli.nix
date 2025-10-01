@@ -124,15 +124,15 @@ lib,
               "move-node-to-workspace 3"
             ];
           }
-          # {
-          #   # check-further-callbacks = false;
-          #   "if" = {
-          #     app-id = "com.google.Chrome";
-          #   };
-          #   run = [
-          #     "move-node-to-workspace 2"
-          #   ];
-          # }
+          {
+            # check-further-callbacks = false;
+            "if" = {
+              app-id = "com.google.Chrome";
+            };
+            run = [
+              "move-node-to-workspace C"
+            ];
+          }
           {
             "if" = {
               app-id = "com.spotify.client";
@@ -225,6 +225,8 @@ lib,
       syntaxHighlighting.enable = true;
       initContent = ''
         eval $(cat ${config.age.secrets.mcp.path})
+        export PATH="$HOME/.local/bin:$PATH"
+        export XDG_CONFIG_HOME="$HOME/.config"
         eval "$(fnm env --use-on-cd --shell zsh)"
       '';
     };
@@ -370,6 +372,12 @@ lib,
       enable = true;
     };
     helix = {
+      enable = true;
+    };
+    zathura = {
+      enable = true;
+    };
+    zed-editor = {
       enable = true;
     };
   };
