@@ -142,6 +142,14 @@ lib,
             ];
           }
           {
+            "if" = {
+              app-id = "app.yaak.desktop";
+            };
+            run = [
+              "move-node-to-workspace Y"
+            ];
+          }
+          {
             # check-further-callbacks = false;
             "if" = {
               app-id = "app.zen-browser.zen";
@@ -226,8 +234,13 @@ lib,
       initContent = ''
         eval $(cat ${config.age.secrets.mcp.path})
         export PATH="$HOME/.local/bin:$PATH"
+        export PATH="$HOME/.cargo/bin:$PATH"
         export XDG_CONFIG_HOME="$HOME/.config"
         eval "$(fnm env --use-on-cd --shell zsh)"
+        #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+        export SDKMAN_DIR="/Users/dev/.sdkman"
+        export ESPANSO_CONFIG_DIR="$HOME/.config/espanso"
+        [[ -s "/Users/dev/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/dev/.sdkman/bin/sdkman-init.sh"
       '';
     };
     zoxide = {
@@ -369,16 +382,20 @@ lib,
       enable = true;
     };
     bun = {
-      enable = true;
+      enable = false;
     };
     helix = {
-      enable = true;
+      enable = false;
     };
     zathura = {
       enable = true;
     };
     zed-editor = {
+      enable = false;
+    };
+    emacs = {
       enable = true;
+      package = pkgs.emacs-macport;
     };
   };
 }

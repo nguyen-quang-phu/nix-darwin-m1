@@ -15,24 +15,24 @@
         vimdiffAlias = true;
         defaultEditor = true;
 
-        plugins = with pkgs.vimPlugins; [
-          # ... your other plugins
-          (nvim-treesitter.withPlugins (_:
-            nvim-treesitter.allGrammars
-            ++ [
-              # # nix-prefetch-github latex-lsp tree-sitter-latex
-              # (pkgs.tree-sitter.buildGrammar {
-              #   language = "latex";
-              #   version = "temp";
-              #   src = pkgs.fetchFromGitHub {
-              #     owner = "latex-lsp";
-              #     repo = "tree-sitter-latex";
-              #     rev = "7b06f6ed394308e7407a1703d2724128c45fc9d7";
-              #     sha256 = "sha256-HbRjblLBExpBkBBjHyEHfnK0oootjAsqkwjmGH3/UYI=";
-              #   };
-              # })
-            ]))
-        ];
+        # plugins = with pkgs.vimPlugins; [
+        #   # ... your other plugins
+        #   (nvim-treesitter.withPlugins (_:
+        #     nvim-treesitter.allGrammars
+        #     ++ [
+        #       # # nix-prefetch-github latex-lsp tree-sitter-latex
+        #       # (pkgs.tree-sitter.buildGrammar {
+        #       #   language = "latex";
+        #       #   version = "temp";
+        #       #   src = pkgs.fetchFromGitHub {
+        #       #     owner = "latex-lsp";
+        #       #     repo = "tree-sitter-latex";
+        #       #     rev = "7b06f6ed394308e7407a1703d2724128c45fc9d7";
+        #       #     sha256 = "sha256-HbRjblLBExpBkBBjHyEHfnK0oootjAsqkwjmGH3/UYI=";
+        #       #   };
+        #       # })
+        #     ]))
+        # ];
       };
 
   home.sessionVariables = {
@@ -103,7 +103,7 @@
       obsidian
       xclip
       # ansible
-      ansible-language-server
+      # ansible-language-server
       # python
       pyright
       # bash

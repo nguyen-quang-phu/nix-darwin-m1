@@ -41,7 +41,7 @@ lib,
     pgcli
     litecli
     nap
-    ngrok
+    # ngrok
     nix-prefetch-scripts
     postman
     # rectangle
@@ -103,6 +103,7 @@ lib,
     # bluetui
     # pulsemixer
     ffmpeg
+    nginx-language-server
   ];
   # fonts.packages = [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
   fonts.packages = with pkgs.nerd-fonts; [
@@ -139,23 +140,26 @@ lib,
     # `brew install`
     # TODO Feel free to add your favorite apps here.
     brews = [
-      "dopplerhq/cli/doppler"
+     "borders"
       "bottom"
-      "copier"
-      "kanata"
-      "cloudflared"
-      "ffmpeg"
-      "borders"
       "btop"
+      "bufbuild/buf/buf"
+      "cloudflared"
+      "copier"
       "coreutils"
       "docker"
+      "dopplerhq/cli/doppler"
       "eslint_d"
+      "ffmpeg"
       "fnm"
-      "gemini-cli"
+      # "gemini-cli"
       "gitmoji"
       "gnu-sed"
       "imagemagick"
       "just"
+      "kanata"
+      "aicommits"
+      "lazygit"
       "lefthook"
       "libiconv"
       "mongocli"
@@ -169,7 +173,6 @@ lib,
       "whalebrew"
       "wrk"
       "yt-dlp"
-      "lazygit"
       {
         name = "redis";
         restart_service = true;
@@ -204,16 +207,18 @@ lib,
     # `brew install --cask`
     # TODO Feel free to add your favorite apps here.
     casks = [
+      "yaak"
       "vlc"
       "espanso"
       "amazon-q"
       "arc"
       # "bitwarden"
-      "calibre"
+      # "calibre"
       "cloudflare-warp"
       "cursor"
       "doll"
       "evkey"
+      "insomnia"
       "figma"
       "firefox"
       "ghostty"

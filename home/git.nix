@@ -1,9 +1,9 @@
 {
-pkgs,
-config,
-osConfig,
-lib,
-...
+  pkgs,
+  config,
+  osConfig,
+  lib,
+  ...
 }: {
   home.file.".config/git/hooks/commit-msg" = {
     source = ./hooks/commit-msg; # Directory containing your hook scripts
@@ -13,13 +13,6 @@ lib,
   programs = {
     git = {
       enable = true;
-      extraConfig = {
-        core = {
-          symlinks = false;
-          hooksPath = "${config.home.homeDirectory}/.config/git/hooks"; # 1 second warning to a typo'd command
-          whitespace = "fix,-indent-with-non-tab,trailing-space,cr-at-eol";
-        }; # Path to your global hooks directory
-      };
       lfs.enable = true;
 
       includes = [
@@ -42,7 +35,33 @@ lib,
           };
         }
       ];
-      extraConfig = {
+      settings = {
+        core = {
+          symlinks = false;
+          hooksPath = "${config.home.homeDirectory}/.config/git/hooks"; # 1 second warning to a typo'd command
+          whitespace = "fix,-indent-with-non-tab,trailing-space,cr-at-eol";
+        }; # Path to your global hooks directory
+        # signing = {
+        #   key = "xxx";
+        #   signByDefault = true;
+        # };
+        alias = {
+          email = "config --local user.email";
+          name = "config --local user.name";
+          br = "rev-parse --abbrev-ref HEAD";
+          can = "!git add . && git status && git commit --amend --no-edit";
+          cara = "!git commit --amend --reset-author --no-edit";
+          colast = "!git checkout -";
+          fsck = "fsck --unreachable | grep commit | cut -d' ' -f3 | xargs git log --merges --no-walk --grep=WIP";
+          hide = "update-index --skip-worktree";
+          pf = "push --force-with-lease";
+          rsho = "reset --hard ORIG_HEAD";
+          rss = "reset --soft HEAD~1";
+          s = "stash -u";
+          sp = "stash apply stash@{0}";
+          unhide = "update-index --no-skip-worktree";
+        };
+
         init.defaultBranch = "master";
         repack.usedeltabaseoffset = "true";
         color.ui = "auto";
@@ -53,7 +72,7 @@ lib,
           sort = "committerdate";
         };
         commit.verbose = true;
-        submodule.recurse=true;
+        submodule.recurse = true;
         fetch.prune = true;
         # pull.ff = "only"; # equivalent to --ff-only
         pull.rebase = true;
@@ -95,38 +114,6 @@ lib,
           # "ssh://git@gitlab.com".pushInsteadOf = "gl:";
         };
       };
-
-      # signing = {
-      #   key = "xxx";
-      #   signByDefault = true;
-      # };
-
-      delta = {
-        enable = true;
-        options = {
-          navigate = true;
-          side-by-side = true;
-          line-numbers = true;
-        };
-      };
-
-      aliases = {
-        email = "config --local user.email";
-        name = "config --local user.name";
-
-        br = "rev-parse --abbrev-ref HEAD";
-        can = "!git add . && git status && git commit --amend --no-edit";
-        cara = "!git commit --amend --reset-author --no-edit";
-        colast = "!git checkout -";
-        fsck = "fsck --unreachable | grep commit | cut -d' ' -f3 | xargs git log --merges --no-walk --grep=WIP";
-        hide = "update-index --skip-worktree";
-        pf = "push --force-with-lease";
-        rsho = "reset --hard ORIG_HEAD";
-        rss = "reset --soft HEAD~1";
-        s = "stash -u";
-        sp = "stash apply stash@{0}";
-        unhide = "update-index --no-skip-worktree";
-      };
       ignores = [
         "lefthook.yml"
         ".husky"
@@ -142,9 +129,20 @@ lib,
         ".lazy.lua"
         ".oxlintrc.json"
         "declarations.d.ts"
+        "types"
+        ".gemini"
+        ".specify"
       ];
     };
 
+    delta = {
+      enable = true;
+      options = {
+        navigate = true;
+        side-by-side = true;
+        line-numbers = true;
+      };
+    };
     git-cliff = {
       enable = true;
     };
