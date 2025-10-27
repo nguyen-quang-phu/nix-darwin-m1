@@ -143,6 +143,14 @@ lib,
           }
           {
             "if" = {
+              app-id = "com.openai.chat";
+            };
+            run = [
+              "move-node-to-workspace G"
+            ];
+          }
+          {
+            "if" = {
               app-id = "app.yaak.desktop";
             };
             run = [
