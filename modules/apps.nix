@@ -22,6 +22,9 @@ lib,
   # Related Discussion: https://discourse.nixos.org/t/darwin-again/29331
   environment.systemPath = ["/opt/homebrew/bin"];
   environment.pathsToLink = ["/Applications"];
+  environment.shells = [
+    pkgs.zsh
+  ];
 
   environment.systemPackages = with pkgs; [
     # redis

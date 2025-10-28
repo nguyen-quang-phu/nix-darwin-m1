@@ -135,6 +135,14 @@ lib,
           }
           {
             "if" = {
+              app-id = "com.electron.dockerdesktop";
+            };
+            run = [
+              "move-node-to-workspace D"
+            ];
+          }
+          {
+            "if" = {
               app-id = "com.spotify.client";
             };
             run = [
