@@ -2,6 +2,17 @@
   description = "Example nix-darwin system flake";
 
   inputs = {
+    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+
+    # Optional: Declarative tap management
+    homebrew-core = {
+      url = "github:homebrew/homebrew-core";
+      flake = false;
+    };
+    homebrew-cask = {
+      url = "github:homebrew/homebrew-cask";
+      flake = false;
+    };
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
@@ -18,6 +29,10 @@
     nixpkgs,
     home-manager,
     agenix,
+    nix-homebrew,
+    homebrew-core,
+    homebrew-cask,
+    ...
     }: let
       username = "dev";
       system = "aarch64-darwin"; # aarch64-darwin or x86_64-darwin
@@ -56,5 +71,5 @@
         nixpkgs.hostPlatform = "aarch64-darwin";
       };
     in
-      import ./darwin { inherit self nix-darwin home-manager agenix configuration inputs; };
+      import ./darwin { inherit self nix-darwin home-manager agenix configuration inputs nix-homebrew; };
 }
