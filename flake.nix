@@ -61,6 +61,7 @@
       darwinConfigurations."dev" = nix-darwin.lib.darwinSystem {
         modules = [
           ./modules/apps.nix
+          ./modules/homebrew
           ./modules/user.nix
           ./modules/nix-core.nix
           configuration
