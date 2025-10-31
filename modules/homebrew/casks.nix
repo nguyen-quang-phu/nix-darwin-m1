@@ -1,0 +1,22 @@
+_:
+[
+  "nikitabobko/tap/aerospace"
+  "yaak"
+  "vlc"
+  "espanso"
+  "amazon-q"
+  "cloudflare-warp"
+  "cursor"
+  "evkey"
+  "firefox"
+  "ghostty"
+  "google-chrome"
+  "karabiner-elements"
+  "keycastr"
+  "maccy"
+  "mattermost"
+  "raindropio"
+  "raycast"
+  "spotify"
+  "zen"
+]
