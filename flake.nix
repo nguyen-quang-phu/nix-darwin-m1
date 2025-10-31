@@ -55,33 +55,6 @@
         # The platform the configuration will be used on.
         nixpkgs.hostPlatform = "aarch64-darwin";
       };
-    in {
-      # Build darwin flake using:
-      # $ darwin-rebuild build --flake .#dev
-      darwinConfigurations."dev" = nix-darwin.lib.darwinSystem {
-        modules = [
-          ./modules/apps.nix
-          ./modules/homebrew
-          ./modules/user.nix
-          ./modules/nix-core.nix
-          configuration
-          home-manager.darwinModules.home-manager
-          {
-            #nixpkgs.overlays = [firefox-darwin.overlay];
-            users.users.dev.home = "/Users/dev";
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              #extraSpecialArgs = specialArgs;
-              users.dev = import ./home;
-              backupFileExtension = "backup";
-            sharedModules = [
-              agenix.homeManagerModules.default
-            ];
-            };
-          }
-        ];
-        specialArgs = {inherit inputs;};
-      };
-    };
+    in
+      import ./darwin { inherit self nix-darwin home-manager agenix configuration inputs; };
 }
