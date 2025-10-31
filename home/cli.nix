@@ -282,7 +282,21 @@ lib,
       enableZshIntegration = true;
 
       flags = [];
-      settings = {};
+      settings = {
+        keymap_mode = "vim-normal";
+        # theme = "Catppuccin-Mocha-Mauve";
+      };
+      # themes = {
+      #   "Catppuccin-Mocha-Mauve" = {
+      #     src = pkgs.fetchFromGitHub {
+      #       owner = "catppuccin";
+      #       repo = "atuin";
+      #       rev = "main";
+      #       sha256 = "sha256-j9L+jPZ52Gg2r/2l53/tS20sS2SgJ8c/8a4S4J4j4j4=";
+      #     };
+      #     file = "themes/mocha/catppuccin-mocha-mauve.toml";
+      #   };
+      # };
     };
 
     bat = {

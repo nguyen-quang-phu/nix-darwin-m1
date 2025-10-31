@@ -39,16 +39,12 @@ lib,
     just
     lazysql
     # macchina
-    maccy
     mycli
     pgcli
-    litecli
-    nap
     # ngrok
     nix-prefetch-scripts
     postman
     # rectangle
-    slack
     tldr
     wget
     yaml-language-server
@@ -71,7 +67,6 @@ lib,
     go
     #comma
     openssl
-    gitlab-ci-local
     fnm
     #vscode-extensions.xdebug.php-debug
     #php81Extensions.xdebug
@@ -126,7 +121,7 @@ lib,
       autoUpdate = false;
       upgrade = true;
       # 'zap': uninstalls all formulae(and related files) not listed here.
-      # cleanup = "zap";
+      cleanup = "zap";
     };
     caskArgs = {
       no_quarantine = true;
@@ -138,12 +133,16 @@ lib,
       "FelixKratz/formulae"
       "netmute/tap"
       "mongodb/brew"
+      "padok-team/tap"
+      "nikitabobko/tap"
     ];
 
     # `brew install`
     # TODO Feel free to add your favorite apps here.
     brews = [
-     "borders"
+      "glances"
+      "poppler"
+      "deno"
       "bottom"
       "btop"
       "bufbuild/buf/buf"
@@ -152,27 +151,18 @@ lib,
       "coreutils"
       "docker"
       "dopplerhq/cli/doppler"
-      "eslint_d"
       "ffmpeg"
       "fnm"
-      # "gemini-cli"
-      "gitmoji"
       "gnu-sed"
       "imagemagick"
       "just"
-      "kanata"
-      "aicommits"
       "lazygit"
       "lefthook"
       "libiconv"
       "mongocli"
       "mongodb-community@8.0"
       "mpv"
-      "nerdfetch"
-      "spicetify-cli"
       "spotify_player"
-      "task"
-      "taskwarrior-tui"
       "whalebrew"
       "wrk"
       "yt-dlp"
@@ -210,19 +200,14 @@ lib,
     # `brew install --cask`
     # TODO Feel free to add your favorite apps here.
     casks = [
+      "nikitabobko/tap/aerospace"
       "yaak"
       "vlc"
       "espanso"
       "amazon-q"
-      "arc"
-      # "bitwarden"
-      # "calibre"
       "cloudflare-warp"
       "cursor"
-      "doll"
       "evkey"
-      "insomnia"
-      "figma"
       "firefox"
       "ghostty"
       "google-chrome"
@@ -230,11 +215,9 @@ lib,
       "keycastr"
       "maccy"
       "mattermost"
-      "numi"
       "raindropio"
       "raycast"
       "spotify"
-      "todoist-app"
       "zen"
 
     ];
@@ -243,7 +226,7 @@ lib,
       # "Xcode" = 497799835;
       # "DropOver" = 1355679052;
       # "Amphetamine" = 937984704;
-      # "Bitwarden" = 1352778147;
+      "Bitwarden" = 1352778147;
     };
 
     whalebrews = [
