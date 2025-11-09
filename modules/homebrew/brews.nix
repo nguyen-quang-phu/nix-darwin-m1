@@ -27,6 +27,7 @@ _:
   "whalebrew"
   "wrk"
   "yt-dlp"
+  "yazi"
   {
     name = "redis";
     restart_service = true;

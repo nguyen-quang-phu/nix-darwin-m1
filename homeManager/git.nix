@@ -115,6 +115,7 @@
         };
       };
       ignores = [
+        ".serena"
         "lefthook.yml"
         ".husky"
         ".DS_Store"

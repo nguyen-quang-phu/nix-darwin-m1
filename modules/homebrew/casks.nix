@@ -1,6 +1,6 @@
 _:
 [
-  "nikitabobko/tap/aerospace"
+  # "nikitabobko/tap/aerospace"
   "yaak"
   "vlc"
   "espanso"
@@ -14,7 +14,7 @@ _:
   "karabiner-elements"
   "keycastr"
   "maccy"
-  "mattermost"
+  # "mattermost"
   "raindropio"
   "raycast"
   "spotify"
