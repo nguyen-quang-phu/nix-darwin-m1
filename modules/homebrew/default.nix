@@ -38,6 +38,7 @@
       "mongodb/brew"
       "padok-team/tap"
       "nikitabobko/tap"
+      "atlassian/homebrew-acli"
     ];
 
     # `brew install`

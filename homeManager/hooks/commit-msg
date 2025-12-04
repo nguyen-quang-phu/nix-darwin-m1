@@ -14,7 +14,9 @@ BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
 # Detect commit type based on branch prefix
 case "$BRANCH_NAME" in
   feature/*) TYPE="feat" EMOJI="✨" ;;
+  feat/*) TYPE="feat" EMOJI="✨" ;;
   bugfix/*) TYPE="fix" EMOJI="🐛" ;;
+  fix/*) TYPE="fix" EMOJI="🐛" ;;
   docs/*) TYPE="docs" EMOJI="📝" ;;
   style/*) TYPE="style" EMOJI="🎨" ;;
   refactor/*) TYPE="refactor" EMOJI="♻️" ;;

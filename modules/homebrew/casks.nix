@@ -4,7 +4,7 @@ _:
   "yaak"
   "vlc"
   "espanso"
-  "amazon-q"
+  "kiro-cli"
   "cloudflare-warp"
   "cursor"
   "evkey"

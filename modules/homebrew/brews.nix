@@ -1,19 +1,21 @@
 _:
 [
-  "gemini-cli"
-  "glances"
-  "poppler"
-  "deno"
+  "poppler" # don't delete
+  "acli"
+  "act"
   "bottom"
   "btop"
   "bufbuild/buf/buf"
   "cloudflared"
   "copier"
   "coreutils"
+  "deno"
   "docker"
   "dopplerhq/cli/doppler"
   "ffmpeg"
   "fnm"
+  "gemini-cli"
+  "gitmoji"
   "gnu-sed"
   "imagemagick"
   "just"
@@ -22,12 +24,19 @@ _:
   "libiconv"
   "mongocli"
   "mongodb-community@8.0"
-  "mpv"
   "spotify_player"
   "whalebrew"
   "wrk"
-  "yt-dlp"
   "yazi"
+  "lnav"
+  # ruby on rails
+  "libyaml"
+  "openssl@3"
+  "gmp"
+  # "rust"
+  "libffi"
+  "readline"
+  "git-town"
   {
     name = "redis";
     restart_service = true;

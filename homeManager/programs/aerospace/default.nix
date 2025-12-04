@@ -167,6 +167,15 @@ _ : {
           ];
         }
         {
+          # check-further-callbacks = false;
+          "if" = {
+            app-id = "app.cattr";
+          };
+          run = [
+            "move-node-to-workspace 9"
+          ];
+        }
+        {
           "if" = {
             app-id = "com.atlassian.trello";
           };

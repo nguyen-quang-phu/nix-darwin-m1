@@ -95,6 +95,7 @@
         rebase = {
           autoSquash = true;
           autoStash = true;
+          updateRefs = true;
         };
 
         rerere = {
@@ -115,6 +116,7 @@
         };
       };
       ignores = [
+        "git-town.toml"
         ".serena"
         "lefthook.yml"
         ".husky"
@@ -133,6 +135,7 @@
         "types"
         ".gemini"
         ".specify"
+        "keynold_scripts"
       ];
     };
 
