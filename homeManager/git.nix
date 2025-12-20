@@ -116,6 +116,7 @@
         };
       };
       ignores = [
+        ".gitattributes"
         "git-town.toml"
         ".serena"
         "lefthook.yml"

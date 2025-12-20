@@ -183,7 +183,14 @@ _ : {
             "move-node-to-workspace T"
           ];
         }
-
+        {
+          "if" = {
+            app-id = "net.ankiweb.launcher";
+          };
+          run = [
+            "move-node-to-workspace A"
+          ];
+        }
         {
           "if" = {
             app-id = "com.bitwarden.desktop";

@@ -9,6 +9,7 @@
     ./git.nix
     ./age
     ./programs
+    ./zsh
     # ./programs
   ];
 

@@ -1,5 +1,6 @@
 _:
 [
+  "commitizen"
   "poppler" # don't delete
   "acli"
   "act"

@@ -2,6 +2,7 @@ _:
 [
   # "nikitabobko/tap/aerospace"
   "yaak"
+  "anki"
   "vlc"
   "espanso"
   "kiro-cli"
@@ -9,7 +10,7 @@ _:
   "cursor"
   "evkey"
   "firefox"
-  "ghostty"
+  # "ghostty"
   "google-chrome"
   "karabiner-elements"
   "keycastr"

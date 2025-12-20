@@ -47,30 +47,13 @@ lib,
         disable_ligatures = "cursor";
         hide_window_decorations = true;
         macos_option_as_alt = true;
+        macos_traditional_fullscreen = true;
         scrollback_lines = -1;
         strip_trailing_spaces = "always";
         startup_session = "./startup.conf";
         allow_remote_control = "socket-only";
         listen_on = "unix:/tmp/kitty";
       };
-    };
-    zsh = {
-      enable = true;
-      autosuggestion.enable = true;
-      enableCompletion = false;
-      oh-my-zsh.enable = true;
-      syntaxHighlighting.enable = true;
-      initContent = ''
-        eval $(cat ${config.age.secrets.mcp.path})
-        export PATH="$HOME/.local/bin:$PATH"
-        export PATH="$HOME/.cargo/bin:$PATH"
-        export XDG_CONFIG_HOME="$HOME/.config"
-        eval "$(fnm env --use-on-cd --shell zsh)"
-        #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-        export SDKMAN_DIR="/Users/dev/.sdkman"
-        export ESPANSO_CONFIG_DIR="$HOME/.config/espanso"
-        [[ -s "/Users/dev/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/dev/.sdkman/bin/sdkman-init.sh"
-      '';
     };
     zoxide = {
       enable = true;
@@ -162,7 +145,7 @@ lib,
     };
 
     mise = {
-      enable = false;
+      enable = true;
 
       enableBashIntegration = true;
       enableFishIntegration = true;
