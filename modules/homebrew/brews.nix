@@ -1,5 +1,15 @@
 _:
 [
+  "mole"  # Deep clean and optimize your Mac. 
+  "pipx"
+  "rustup"
+  "resterm"
+  "grpcurl"
+  "rip"
+  "harlequin"
+  "dotstate"
+  "ast-grep"
+  "podman"
   "commitizen"
   "poppler" # don't delete
   "acli"
@@ -38,6 +48,7 @@ _:
   "libffi"
   "readline"
   "git-town"
+  "localstack/tap/localstack-cli"
   {
     name = "redis";
     restart_service = true;

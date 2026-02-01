@@ -2,6 +2,7 @@ _:
 [
   # "nikitabobko/tap/aerospace"
   "yaak"
+  "firefox@developer-edition"
   "anki"
   "vlc"
   "espanso"

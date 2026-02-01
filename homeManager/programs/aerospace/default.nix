@@ -1,6 +1,7 @@
 _ : {
   programs.aerospace = {
     enable = true;
+    launchd.enable = true;
     userSettings = {
       start-at-login = true;
       mode.main.binding = {
@@ -80,6 +81,11 @@ _ : {
 
         # cmd-h = []; # Disable "hide application"
         cmd-alt-h = []; # Disable "hide others"
+      };
+
+      workspace-to-monitor-force-assignment = {
+        "S" = "secondary";
+        "M" = "main";
       };
 
       after-startup-command = [

@@ -63,7 +63,7 @@ pkgs,
     yaml-language-server
     # latex
     texliveFull
-    python311Packages.pylatexenc
+    # python311Packages.pylatexenc
     texlab
     # all
     ctags-lsp
@@ -111,7 +111,7 @@ pkgs,
     # # cssmodule
     # cssmodules-language-server
     # rust
-    rustup
+    # rustup
     #java
     jdt-language-server
     # grammar

@@ -38,6 +38,7 @@
       "darwin-update" = "just -f ~/.config/nix-darwin/justfile update";
       "ze" = "zellij";
       "zed" = "ze a -c default";
+      "docker" = "podman";
     };
   };
   # Let Home Manager install and manage itself.

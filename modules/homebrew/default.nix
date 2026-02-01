@@ -39,6 +39,8 @@
       "padok-team/tap"
       "nikitabobko/tap"
       "atlassian/homebrew-acli"
+      "serkanyersen/dotstate"
+      "cesarferreira/tap"
     ];
 
     # `brew install`
