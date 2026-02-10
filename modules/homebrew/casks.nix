@@ -1,6 +1,7 @@
 _:
 [
   # "nikitabobko/tap/aerospace"
+  "http-toolkit"
   "yaak"
   "firefox@developer-edition"
   "anki"

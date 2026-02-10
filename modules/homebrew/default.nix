@@ -32,6 +32,7 @@
     };
 
     taps = [
+      "LargeModGames/spotatui"
       "chase/tap"
       "FelixKratz/formulae"
       "netmute/tap"

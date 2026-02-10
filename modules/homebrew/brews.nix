@@ -1,5 +1,16 @@
 _:
 [
+  "portaudio"
+  "spotatui"
+  # yazi
+  "media-info"
+  "ffmpeg"
+  "jq"
+  "sevenzip"
+  "poppler" # don't delete
+  "resvg"
+  "imagemagick"
+
   "mole"  # Deep clean and optimize your Mac. 
   "pipx"
   "rustup"
@@ -11,7 +22,6 @@ _:
   "ast-grep"
   "podman"
   "commitizen"
-  "poppler" # don't delete
   "acli"
   "act"
   "bottom"
@@ -23,12 +33,10 @@ _:
   "deno"
   "docker"
   "dopplerhq/cli/doppler"
-  "ffmpeg"
   "fnm"
   "gemini-cli"
   "gitmoji"
   "gnu-sed"
-  "imagemagick"
   "just"
   "lazygit"
   "lefthook"

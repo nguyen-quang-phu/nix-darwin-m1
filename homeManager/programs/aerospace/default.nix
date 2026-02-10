@@ -191,6 +191,22 @@ _ : {
         }
         {
           "if" = {
+            app-id = "tech.httptoolkit.desktop";
+          };
+          run = [
+            "move-node-to-workspace T"
+          ];
+        }
+        {
+          "if" = {
+            app-id = "org.mozilla.firefoxdeveloperedition";
+          };
+          run = [
+            "move-node-to-workspace F"
+          ];
+        }
+        {
+          "if" = {
             app-id = "net.ankiweb.launcher";
           };
           run = [
