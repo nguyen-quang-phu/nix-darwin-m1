@@ -32,6 +32,8 @@
     };
 
     taps = [
+      "anomalyco/tap"
+      "tmuxpack/tpack"
       "LargeModGames/spotatui"
       "chase/tap"
       "FelixKratz/formulae"
@@ -57,6 +59,7 @@
       # "DropOver" = 1355679052;
       # "Amphetamine" = 937984704;
       "Bitwarden" = 1352778147;
+      "Trello" = 1278508951;
     };
 
     whalebrews = [

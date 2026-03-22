@@ -32,13 +32,14 @@
     file = {};
 
     shellAliases = {
+      "t"="tmux new-session -A -s keynold";
       "..." = "cd ../..";
       "darwin-build" = "just -f ~/.config/nix-darwin/justfile build";
       "edit-secrets" = "just -f ~/.config/nix-darwin/justfile edit-secrets";
       "darwin-update" = "just -f ~/.config/nix-darwin/justfile update";
       "ze" = "zellij";
       "zed" = "ze a -c default";
-      "docker" = "podman";
+      # "docker" = "podman";
     };
   };
   # Let Home Manager install and manage itself.

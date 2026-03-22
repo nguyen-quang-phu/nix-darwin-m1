@@ -62,6 +62,7 @@ lib,
         startup_session = "./startup.conf";
         allow_remote_control = "socket-only";
         listen_on = "unix:/tmp/kitty";
+        notify_on_cmd_finish = "always";
       };
     };
     zoxide = {

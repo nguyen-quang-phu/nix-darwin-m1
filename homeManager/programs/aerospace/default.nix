@@ -183,6 +183,14 @@ _ : {
         }
         {
           "if" = {
+            app-id = "com.tinyspeck.slackmacgap";
+          };
+          run = [
+            "move-node-to-workspace 8"
+          ];
+        }
+        {
+          "if" = {
             app-id = "com.atlassian.trello";
           };
           run = [

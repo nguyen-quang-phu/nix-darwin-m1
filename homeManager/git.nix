@@ -40,6 +40,8 @@
           symlinks = false;
           hooksPath = "${config.home.homeDirectory}/.config/git/hooks"; # 1 second warning to a typo'd command
           whitespace = "fix,-indent-with-non-tab,trailing-space,cr-at-eol";
+          fsmonitor = true;
+          untrackedCache = true;
         }; # Path to your global hooks directory
         # signing = {
         #   key = "xxx";

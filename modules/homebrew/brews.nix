@@ -1,5 +1,14 @@
 _:
 [
+  "dotenvx/brew/dotenvx"
+  "git-lfs"
+  "nginx"
+  "pam-reattach"
+  "opencode"
+  # tmux
+  "tpack"
+  "tmux"
+
   "portaudio"
   "spotatui"
   # yazi
@@ -17,8 +26,6 @@ _:
   "resterm"
   "grpcurl"
   "rip"
-  "harlequin"
-  "dotstate"
   "ast-grep"
   "podman"
   "commitizen"
