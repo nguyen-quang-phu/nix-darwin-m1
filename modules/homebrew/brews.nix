@@ -1,5 +1,9 @@
 _:
 [
+  "withgraphite/tap/graphite"
+  "diffnav"
+  "worktrunk"
+  "television"
   "dotenvx/brew/dotenvx"
   "git-lfs"
   "nginx"

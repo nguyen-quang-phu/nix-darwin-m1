@@ -1,5 +1,6 @@
 _:
 [
+  "homerow"
   "slack"
   "copilot-cli"
   "hiddenbar"

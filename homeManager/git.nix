@@ -36,6 +36,9 @@
         }
       ];
       settings = {
+        pager = {
+          diff = "diffnav";
+        };
         core = {
           symlinks = false;
           hooksPath = "${config.home.homeDirectory}/.config/git/hooks"; # 1 second warning to a typo'd command
